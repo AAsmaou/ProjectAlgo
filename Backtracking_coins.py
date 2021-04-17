@@ -32,7 +32,7 @@ def bk(change, return_coins):
                     size = len(best_return_coins)
 
             else:
-                backtracking(change, return_coins)
+                bk(change, return_coins)
 
         #backtrack step
         return_coins.pop()
@@ -69,7 +69,7 @@ def bkOpt(change, return_coins):
                 size = len(best_return_coins)
 
             else:
-                backtracking(change, return_coins)
+                bkOpt(change, return_coins)
 
         #backtrack step
         return_coins.pop()
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     # These variables are going to be used by the backtracking function to compute the solution 
     return_coins = []
     best_return_coins = []
-    size = 1000;
+    size = 1000
 
     #run backtracking algo
     bk(N, return_coins)
