@@ -103,7 +103,8 @@ if __name__ == '__main__':
 
     #run backtracking algo
     bk(N, return_coins)
-
+    #bkOpt(N, return_coins)
+    
     stop = timeit.default_timer() #stop timer
 
     #Print results
