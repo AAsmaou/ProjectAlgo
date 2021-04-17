@@ -32,7 +32,7 @@ def bk(change, return_coins):
                     size = len(best_return_coins)
 
             else:
-                backtracking(change, return_coins)
+                bk(change, return_coins)
 
         #backtrack step
         return_coins.pop()
@@ -69,7 +69,7 @@ def bkOpt(change, return_coins):
                 size = len(best_return_coins)
 
             else:
-                backtracking(change, return_coins)
+                bkOpt(change, return_coins)
 
         #backtrack step
         return_coins.pop()
@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
     start = timeit.default_timer() #start timer
   
-    print("START BACKTRACKING PROGRAM")
+    print("\====================================START BACKTRACKING PROGRAM=================================\n")
     print("") #newline
     N_combination=0
 
@@ -90,7 +90,7 @@ if __name__ == '__main__':
     #list_coins = [6, 4, 1]
     #list_coins = [3, 1]
  
-    print("Set of coins: ", list_coins)
+    print("\nSet of coins: ", list_coins)
     print("") #newline
 
     # total change required
@@ -99,11 +99,11 @@ if __name__ == '__main__':
     # These variables are going to be used by the backtracking function to compute the solution 
     return_coins = []
     best_return_coins = []
-    size = 1000;
+    size = 1000
 
     #run backtracking algo
-    bk(N, return_coins)
-    #bkOpt(N, return_coins)
+    #bk(N, return_coins)
+    bkOpt(N, return_coins)
     
     stop = timeit.default_timer() #stop timer
 
@@ -111,5 +111,5 @@ if __name__ == '__main__':
     print("") #newline
     print("The best way to give back the change: ", N, " is: ", best_return_coins)
     print('Time: ', stop - start)
-    print("END program")
+    print("\n\n=======================================END program===========================================\n")
 
